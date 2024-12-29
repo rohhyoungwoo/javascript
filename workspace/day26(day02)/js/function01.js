@@ -33,7 +33,8 @@ function introduce(id, pw, name="사용자"){
   console.log(`아이디 : ${id}, 비밀번호 : ${pw}, 이름 : ${name}`);
 }
 
-introduce("abc", 0123, "짱구");
+// introduce("abc", 0123, "짱구");
+introduce("abc", 3424);
 //0123로 인수를 전달하면 8진수로 해석되어 계산된다
 // 아이디 : abc, 비밀번호 : 83, 이름 : 짱구
 // 0123을 8진수로 변환 => 1 x 8² + 2 x 8¹ + 3 x 8^0 = 64 + 16 + 3 = 83(10진수)
@@ -42,10 +43,10 @@ introduce("abc", 0123, "짱구");
 //가변 매개변수 : 함수 호출 시 몇개의 값이 전달될지 모를 때 사용한다
 function printAdd(...numbers){
   console.log(numbers, typeof numbers);
-  // for (let i = 0; i < numbers.length; i++){
-  //   // console.log(i);
-  //   console.log(numbers[i]);
-  // }
+  for (let i = 0; i < numbers.length; i++){
+    console.log(i);
+    console.log(numbers[i]);
+  }
 
   //자바 for(자료형 변수명 : 배열명){}, 스트림 forEach
   //자바스크립트 for(let 변수명 in 배열명){}

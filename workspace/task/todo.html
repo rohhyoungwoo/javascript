@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <!-- <link rel="stylesheet" href="./todo.css"> -->
+   <style>
+*{
+  margin: 0;
+  padding: 0;
+}
+header{
+  background-color: dimgrey;
+  color: white;
+  text-align: center;
+  /* padding: 30px 30px; */
+  width: 100%;
+  height: 200px;
+}
+h1{
+  padding: 50px 0;
+}
+.list{
+  display: flex;
+  flex-direction: column;
+}
+   </style>
+</head>
+
+<body>
+  <header>
+    <h1>To-Do-List</h1>
+    <nav>
+      <ul>
+        <div class="list">
+          <span><a href="./">지난 할일 목록</a><span>
+          <span><a href="./">오늘 할일 목록</a><span>
+          <span><a href="./">내일 할일 목록</a><span>
+        </div>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h2>Tasks</h2>
+    <ul>
+      <li><sapn>할 일 항목 1</sapn></li>
+      <li><sapn>할 일 항목 2</sapn></li>
+      <li><sapn class="completed">할 일 항목 3</sapn></li>
+    </ul>
+  </main>
+</body>
+</html>

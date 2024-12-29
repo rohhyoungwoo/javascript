@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>드롭다운 메뉴</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    .home{
+      background-color: orange;
+      width: 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    header{
+      background-color: darkblue;
+      display: flex;
+      flex-direction: row;
+      color: white;
+      font-size: 25px;
+      margin: 50px 10px;
+
+      
+    }
+
+    li{
+      margin: 10px 10px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .menu--container{
+      display: flex; 
+      flex-direction: row; 
+      height: 100%;
+      width: 100%;
+     text-align: center;
+    }
+
+
+
+    .menu--textbox:hover{
+      background-color: orange;
+      width: 110px;
+      margin: 0;
+      padding: 10px 10px;
+    }
+    .menu1--container.hover{
+
+      
+      
+    }
+  
+    .menu1--textbox-article{
+      display: none;
+      position: absolute;
+
+    }
+  
+    .menu1--textbox-article li{
+      display: block;
+
+      width: 110px;
+
+    }
+
+    .menu1--textbox-article ul{
+      margin-top: 0;
+      margin-left: -10px;
+      background-color: green;
+    }
+    
+
+    .menu--textbox:hover .menu1--textbox-article{
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <div class="menu--container">
+      <nav class="menu1--container">
+        <ul>
+          <li class="menu--textbox">Menu1
+            <div class="menu1--textbox-article">
+              <ul>
+                <li>Menu1-1</li>
+                <li>Menu1-2</li>
+                <li>Menu1-3</li>
+                <li>Menu1-4</li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <nav class="menu1--container">
+        <ul>
+          <li class="menu--textbox">Menu2
+            <div class="menu1--textbox-article">
+              <ul>
+                <li class="menu2--article">Menu2-1</li>
+                <li class="menu2--article">Menu2-2</li>
+                <li class="menu2--article">Menu2-3</li>
+                <li class="menu2--article">Menu2-4</li>
+              </ul>
+            <div>
+          </li>
+        </ul>
+      </nav>
+      <nav class="menu1--container">
+        <ul>
+          <li class="menu--textbox">Menu3
+            <div class="menu1--textbox-article">
+              <ul>
+                <li class="menu3--article">Menu3-1</li>
+                <li class="menu3--article">Menu3-2</li>
+                <li class="menu3--article">Menu3-3</li>
+              </ul>
+            <div>
+          </li>
+        </ul>
+      </nav>
+      <nav class="menu1--container">
+        <ul>
+          <li class="menu--textbox">Menu4</li>
+        </ul>
+      </nav>
+    </div>
+    <nav class="home">home</nav>
+  </header>
+</body>
+</html>
