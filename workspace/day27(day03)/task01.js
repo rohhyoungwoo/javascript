@@ -67,51 +67,68 @@
 
 
 //2. 배열의 모든 요소를 2개로 증가시켜 새로운 배열을 만들어 출력하기
-const numbers = [1, 2, 3, 4, 5];
+// const numbers = [1, 2, 3, 4, 5];
 
-const newnumber = numbers.map(function (element, index, array){
-  return element + 2;
-})
-console.log(newnumber);
+// const newnumber = numbers.map(function (element, index, array){
+//   return element + 2;
+// })
+// console.log(newnumber);
 
 //1) 2배 증가시켜 새로운 배열로 출력하기
-const newnumber2 = numbers.map(function (element, index, array){
-  return element * 2;
-})
-console.log(newnumber2);
-//2) 배열의 길이를 구하고 출력하기
-console.log(numbers.length);
+// const newnumber2 = numbers.map(function (element, index, array){
+//   return element * 2;
+// })
+// console.log(newnumber2);
 
-//3) 배열에서 특정요소를 삭제하기(3) 메소드 사용
-// .pop(), .shift(), .splice()
-console.log(numbers.pop()); // 마지막 5
-console.log(numbers); // 5 삭제
+// // const newnumbers = [];
+// // for(let i in numbers){
+// //   newnumbers[i] = numbers[i]*2;
+// // }
+// // console.log(numbers);
 
-console.log(numbers.shift()); // 첫번째 요소 값 삭제 1 삭제 
-console.log(numbers); // 1 삭제
 
-console.log(numbers.splice(1,1)); // 인덱스 번호 1부터 1개 요소 삭제
-console.log(numbers); // 3 삭제
+// //2) 배열의 길이를 구하고 출력하기
+// console.log(numbers.length);
 
-//4) 배열에서 특정 값(cat)을 검색하고 그 값의 인덱스 출력하기
-const animals = ['dog', 'cat', 'rabbit'];
-console.log(animals.indexOf('cat'));
-console.log(animals.indexOf('rabbit'));
+// //3) 배열에서 특정요소를 삭제하기(3) 메소드 사용
+// // .pop(), .shift(), .splice()
+// console.log(numbers.pop()); // 마지막 5
+// console.log(numbers); // 5 삭제
 
-//5) 배열의 첫번째와 마지막요소를 제거한 뒤 남은 배열 출력하기
-const colors = ['red', 'blue', 'green', 'yellow'];
-console.log(colors.shift());
-console.log(colors.pop());
-console.log(colors);
+// console.log(numbers.shift()); // 첫번째 요소 값 삭제 1 삭제 
+// console.log(numbers); // 1 삭제
+
+// console.log(numbers.splice(1,1)); // 인덱스 번호 1부터 1개 요소 삭제
+// console.log(numbers); // 3 삭제
+
+// //4) 배열에서 특정 값(cat)을 검색하고 그 값의 인덱스 출력하기
+// const animals = ['dog', 'cat', 'rabbit'];
+// console.log(animals.indexOf('cat'));
+// console.log(animals.indexOf('rabbit'));
+
+// //5) 배열의 첫번째와 마지막요소를 제거한 뒤 남은 배열 출력하기
+// const colors = ['red', 'blue', 'green', 'yellow'];
+// console.log(colors.shift());
+// console.log(colors.pop());
+// console.log(colors);
 
 //3. 혼합문제
 //1) 배열의 요소를 객체로 변환하여 새로운 배열을 만들기
 //  주어진 배열의 값을 객체의 value 속성으로 저장할것
-const data = [10, 20, 30];
-const newdata = data.map(function (element, index, Array){
-  return element;
-})
-console.log(newdata);
+// const data = [10, 20, 30];
+// const newdata = data.map(function (element, index, Array){
+//   return element;
+// })
+// console.log(newdata);
+
+// // 다른 방법?
+// const data1 = [];
+// console.log(data1);
+
+// data.forEach(function (element){
+//   data1.push(element);
+// });
+// console.log(data1);
 
 //2) 배열을 활용하여 특정값을 기준으로 객체 업데이트하기
 //id가 2인 객체의 나이를 6으로 변경, subject를 'web 표준'으로 변경
@@ -120,7 +137,32 @@ const users = [
   {id : 2, name : "철수", age : 5, subjects :  'javascript'},
   {id : 3, name : "맹구", age : 5, subjects :  'javascript'},
 ];
+//  const result = users.map(users =>{
+//   return users.id === 2 ? {...users, age: 6 , subjects: 'web 표준'} : users
+//  });
+//  console.log(result);
 
+
+const newusers1 = users.map(function (element){
+  if(element.id === 2){
+    element.age = 6;
+    element.subjects = `web 표준`;
+  }
+  return element;
+});
+console.log(newusers1);
+
+// const newusers = users.map(function (element){
+//   return element;
+// });
+// console.log(newusers);
+// console.log(users.id(2));
 
 //3) 배열의 요소를 모두 더하여 총합 출력하기
-const numbers2 = [2, 5, 20, 10];
+// const numbers2 = [2, 5, 20, 10];
+
+// let result2 = 0;
+// for(let i in numbers2){
+//   result2 += numbers2[i];
+//  }
+// console.log(result2);

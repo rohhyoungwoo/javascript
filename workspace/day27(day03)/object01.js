@@ -51,47 +51,47 @@ for(let i in programming){
   console.log(programming[i]); //해당 프로퍼티 값이 나옴
 }
 
-// for(let j of programming){
-//   console.log(j);
+// // for(let j of programming){
+// //   console.log(j);
+// // }
+
+// //for...in
+// // 객체의 키(프로퍼티 이름)을 순회한다
+// // 일반 객체나 배열에서 모두 사용 가능하다
+
+// //for...of
+// // 이터러블(iterable)객체에서만 사용가능 => 배열, 문자열, Map, Set 등..
+// // 순회 시 객체의 값(value)를 반환한다
+// // 일반 객체는 이터러블 객체가 아니기 때문에 사용불가하다 
+// // [Symbol.iterator] 메소드를 가진 객체를 이터러블 객체라고 한다
+
+// //객체를 for...of로 순회하려면 배열로 변환하면 된다
+// //Object.keys(), Object.values(), Object.entries()를 사용한다
+// for(let key of Object.keys(programming)){
+//   console.log(key);
 // }
 
-//for...in
-// 객체의 키(프로퍼티 이름)을 순회한다
-// 일반 객체나 배열에서 모두 사용 가능하다
+// for(let value of Object.values(programming)){
+//   console.log(value);
+// }
 
-//for...of
-// 이터러블(iterable)객체에서만 사용가능 => 배열, 문자열, Map, Set 등..
-// 순회 시 객체의 값(value)를 반환한다
-// 일반 객체는 이터러블 객체가 아니기 때문에 사용불가하다 
-// [Symbol.iterator] 메소드를 가진 객체를 이터러블 객체라고 한다
+// for(let [key, value] of Object.entries(programming)){
+//   console.log(key, value);
+// }
+// //객체에 [Symbol.iterator]를 직접 추가
+// const program = {
+//   lang1 : "javascript",
+//   lang2 : "git",
+//   lang3 : "jsp",
+//   [Symbol.iterator] : function* (){
+//     for(let key in this){
+//       if(this.hasOwnProperty(key)){
+//         yield this[key];
+//       }
+//     }
+//   },
+// };
 
-//객체를 for...of로 순회하려면 배열로 변환하면 된다
-//Object.keys(), Object.values(), Object.entries()를 사용한다
-for(let key of Object.keys(programming)){
-  console.log(key);
-}
-
-for(let value of Object.values(programming)){
-  console.log(value);
-}
-
-for(let [key, value] of Object.entries(programming)){
-  console.log(key, value);
-}
-//객체에 [Symbol.iterator]를 직접 추가
-const program = {
-  lang1 : "javascript",
-  lang2 : "git",
-  lang3 : "jsp",
-  [Symbol.iterator] : function* (){
-    for(let key in this){
-      if(this.hasOwnProperty(key)){
-        yield this[key];
-      }
-    }
-  },
-};
-
-for(let value of program){
-  console.log(value);
-}
+// for(let value of program){
+//   console.log(value);
+// }
