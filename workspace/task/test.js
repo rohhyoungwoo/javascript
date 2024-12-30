@@ -40,7 +40,7 @@ function sumAll1(...numbers){
   }
   console.log(result);
 }
-sumAll1(10,20,30,40,50);
+// sumAll1(10,20,30,40,50);
 
 // sumAll2 익명함수
 let sumAll2 = function (...numbers){
@@ -51,17 +51,63 @@ let sumAll2 = function (...numbers){
   }
   console.log(result1);
 }
-sumAll2(1,2,3);
+// sumAll2(1,2,3);
 
 
 // ## 4. 콜백함수를 매개변수로 받아 두 숫자를 전달하고 연산결과(사칙연산 모두) 출력하는 oper 만들기
+// function oper (num1, num2, callback){
+//   callback(num1, num2);
+// }
+// oper(10,20);
+// const add = (result) => num1 + num2;
+
+// oper(10, 5, function(num1, num2){
+//   console.log(num1 + num2);
+//   console.log(num1 - num2);
+//   console.log(num1 * num2);
+//   console.log(num1 / num2);
+// });
+
+// function oper(a, b, callback){
+//   console.log(`결과 : ${callback(a,b)}`);
+// }
+// oper(10, 5, (x,y) => x + y);
+// oper(10, 5, (num1, num2) => num1 - num2);
+// oper(10, 5, (x, y) => x * y);
+// oper(10, 5, (x, y) => x / y);
+
+
 
 // ## 5. 사용자 데이터를 배열로 받아 20살 이상인 사용자만 필터링 하는 newUser 함수 만들기
-
+// if(입력된 값이 20이상이면(for문으로 배열의 값을 넣는다)) 출력 
+// function newUser(...numbers){
+  
+//   for(let i = 0; i < numbers.length; i++){
+//     if(numbers[i] >= 20){
+//       result = numbers[i];
+//       console.log(result);
+//     }
+//   }
+// }
+// newUser(10, 21, 20);
 // ### newUser함수는 두개의 매개변수를 받는다
+// function newUser1(num1, num2){
+//   for(let j = 0; j < 2; j++){
+//     result = 
+
+//   }
+// }
+// newUser1(10,21);
 // users : 사용자 이름 배열(ex : [ { name: '짱구', age: 25 }, { name: '철수', age: 18 }, { name: '훈이', age: 30 } ])
 // callback : 데이터를 처리할 함수
 
+
+
+
 // ### 6. 비동기 작업 체인
+
+
+
+
 
 // ### 세 가지 작업을 수행하는 step1, step2, step3가 있습니다. 각 함수는 1초 후에 실행하고 runStep 함수에서 각 단계가 완료되면 다음단계로 넘어가고 마지막에는 모든 함수 호출 완료를 출력한다
