@@ -50,7 +50,7 @@ console.log(numbers2.indexOf(3)); //2 인덱스 반환
 console.log(numbers2.indexOf(10)); //값이 없어서 -1로 반환 
 
 //.fill(값) : 배열의 모든 요소를 해당 값으로 채우기
-//.fill(rkqt, 시작인덱스, 종료인덱스) : 시작인덱스 ~ 종료인덱스-1까지 해당 값으로 채운다
+//.fill(값, 시작인덱스, 종료인덱스) : 시작인덱스 ~ 종료인덱스-1까지 해당 값으로 채운다
 const numbers3 = new Array(5).fill(10, 2, 4);
 console.log(numbers3);
 

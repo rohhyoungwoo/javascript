@@ -137,20 +137,20 @@ const users = [
   {id : 2, name : "철수", age : 5, subjects :  'javascript'},
   {id : 3, name : "맹구", age : 5, subjects :  'javascript'},
 ];
-//  const result = users.map(users =>{
-//   return users.id === 2 ? {...users, age: 6 , subjects: 'web 표준'} : users
-//  });
-//  console.log(result);
-
-
-const newusers1 = users.map(function (element){
-  if(element.id === 2){
-    element.age = 6;
-    element.subjects = `web 표준`;
-  }
-  return element;
+const result = users.map(users =>{
+  return users.id === 2 ? {...users, age: 6 , subjects: 'web 표준'} : users
 });
-console.log(newusers1);
+console.log(result);
+
+
+// const newusers1 = users.map(function (element){
+//   if(element.id === 2){
+//     element.age = 6;
+//     element.subjects = `web 표준`;
+//   }
+//   return element;
+// });
+// console.log(newusers1);
 
 // const newusers = users.map(function (element){
 //   return element;

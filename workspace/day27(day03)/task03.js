@@ -1,9 +1,23 @@
 //1. 문자열을 인수로 받아 역순으로 뒤집을 결과를 반환하는 함수
 // 콜백을 사용하여 문자열을 역순으로 출력
-
 //함수명 printStr()  매개변수 1개
 //함수명 reverseStr() 콜백사용
 // 참고 : split(), reverse(), join()
+
+function printStr(str, callback){
+  callback(str);
+}
+
+printStr("요세하녕안", function reverseStr(str, index = 0){
+  if(index === str.length){
+    return "";
+  }
+  return reverseStr(str, index + 1) + str[index];
+})
+
+
+
+
 
 //2.  성과 이름을 전달받아서 풀네임을 만든 뒤 000님 환영합니다 출력하기
 
