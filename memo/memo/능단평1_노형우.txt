@@ -1,0 +1,118 @@
+package ex02_노형우;
+
+public class Print {
+	public static void main(String[] args) {
+		
+//		2. 15부터 30까지 중 짝수의 합을 출력하라
+//		- 클래스명 : Print
+//		- 단, while문을 사용할 것
+		
+		//로직구성
+		//while문 사용해야함- while(조건식){
+		//			반복실행할 문장;
+		//}
+		//숫자의 범위를 지정할 int형 변수 선언
+		//짝수들의 합의 값을 저장할 변수 선언
+		//15부터 30까지의 반복되는 수들 중 짝수들의 합, (+=) 필요
+		int count = 14;
+		int sum = 0;
+		while(count < 31) {
+			if(count%2 == 0) {
+				sum += count;
+			}
+			count++;
+		}
+		System.out.println("15부터 30까지 중 짝수의 합 : " + sum);
+		
+		
+	}
+}
+
+package ex05_노형우;
+
+public abstract class Animal {
+	//필드
+	protected String name;
+
+	
+	//생성자
+	public Animal(String name) {
+		this.name = name;
+	}	
+	
+	//메소드
+	public String getName() {
+		return name;
+	}
+	
+	
+	void performActions() {
+		System.out.println("동물의 행동을 출력");
+	}
+
+}
+
+
+
+package ex05_노형우;
+
+public class Pet extends Animal{
+
+	//생성자
+	public Pet(String name) {
+		super(name);
+	}
+
+	//메소드
+	void play() {
+		System.out.println(this.name + "이 장난을 칩니다");
+	}
+	
+	void eat() {
+		System.out.println(this.name + "이 먹습니다");
+	}
+	
+	void sleep() {
+		System.out.println(this.name + "이 잠을 잡니다");
+	}
+}
+
+package ex05_노형우;
+
+public abstract class Zoo {
+
+	//필드
+	Animal[] animals;
+	int animalCount;
+	
+	//생성자
+	public Zoo(int animalCount) {
+		this.animalCount = animalCount;
+	}
+	
+	//메소드
+	abstract void addAnimal(Animal[]animals);{
+		for(Animal data :animals) {
+			if(this.animalCount > animals.length) {
+				System.out.println("더 이상 동물을 추가할 수 없습니다");
+			}
+		}
+	}
+	
+	//메소드
+	void printAllAnimals(Animal animals) {
+	
+	}
+}
+
+while문에서는 풀긴 풀었는데 여러 방식으로 생각해보질 못해서 응용하는게 부족한거같습니다..
+그리고 for문 문제에서 int j와 int k에 대한 조건식을 작성하는데 오래 걸렸습니다. 시험 보기 전에는 비교적 빠르게 작성해서 풀었었는데도
+막상 시험에서 시간이 훨씬 걸렸던거같습니다. 다양한 문제를 더 많이 풀어봐야하나 싶었습니다..
+클래스와 상속 문제들에서는 코드를 줄이거나 응용하는게 부족했던거 같습니다. 그리고 풀면서 객체를 생성하고 출력하는 것에 확신이 없는 느낌이였어서 상속관계에 있을때 출력할 때 업캐스팅과 다운캐스팅에 대한 이해를 좀 더 해보겠습니다
+그리고 배열추가, 메소드를 각 클래스에서 생성한 후에 메인 클래스에서 불러올때 막혔습니다... 오버로딩 오버라이딩에 불러오는 개념들
+다시 한번더 복습하겠습니다...
+
+
+
+
+
