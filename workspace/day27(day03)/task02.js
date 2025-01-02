@@ -99,7 +99,7 @@
 // const students = [student1, student2, student3, student4];
 // console.log(students);
 
-//4. 1부터 100까지의 숫자중 3, 6, 9의 배수 합계 출력
+// 4. 1부터 100까지의 숫자중 3, 6, 9의 배수 합계 출력
 // const numbers = [];
 // let count = 1;
 // for(let i = 0; i < 100; i++){
@@ -107,15 +107,22 @@
 // }
 // console.log(numbers);
 
-const numbers = [];
+// const numbers = [];
+// let count = 1;
+// let result = 0;
+// for(let i = 0; i < 100; i++){
+//   // console.log(numbers);
+//   numbers[i] = count++;
+//   if(numbers[i] % 3 === 0){
+//     // console.log(numbers[i]);
+//     result += numbers[i]; 
+//   }
+// }
+// console.log(result);
+
+const numbersArray = [];
 let count = 1;
-let result = 0;
-for(let i = 0; i < 100; i++){
-  // console.log(numbers);
-  numbers[i] = count++;
-  if(numbers[i] % 3 === 0){
-    // console.log(numbers[i]);
-    result += numbers[i]; 
-  }
+for(let i = 0; i < 10; i++){
+  numbersArray[i] = count++;
 }
-console.log(result);
+console.log(numbersArray);
